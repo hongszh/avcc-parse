@@ -11,7 +11,8 @@ g++ -fdiagnostics-color=always -g pps-sps-parse.cpp -o pps-sps-parse
 ./pps-sps-parse
 ```
 
-## 对比三个bin文件的内容
+## 结果对比
+<br>
 
 > codec_data，在android里面简称csd，通过gst-play可以方便的获取一个mp4文件的codec_data，
 > 然后将buffer写到csd.bin文件，dump_buffer()函数可以生成。
@@ -37,6 +38,16 @@ $ hexdump -C pps.bin
 00000000  00 00 00 01 68 eb e3 cb  22 c0                    |....h...".|
 0000000a
 ```
+
+<br>
+
+---
+
+## 参考
+
+[FFmpeg对sps/pps的解析和格式转换](https://cloud.tencent.com/developer/article/1335918)
+
+[码流格式:Annex-B, AVCC(H.264)与HVCC(H.265)](https://blog.csdn.net/yue_huang/article/details/75126155)
 
 
 
