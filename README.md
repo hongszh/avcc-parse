@@ -45,6 +45,8 @@ $ hexdump -C pps.bin
 
 ## 参考
 
+[gstreamer中解析生成android的csd-0和csd-1](https://blog.csdn.net/hongszh/article/details/125340309?spm=1001.2014.3001.5501)
+
 [FFmpeg对sps/pps的解析和格式转换](https://cloud.tencent.com/developer/article/1335918)
 
 [码流格式:Annex-B, AVCC(H.264)与HVCC(H.265)](https://blog.csdn.net/yue_huang/article/details/75126155)
