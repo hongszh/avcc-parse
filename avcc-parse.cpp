@@ -167,7 +167,7 @@ void read_file(const char*path, uint8_t **buffer, int *size) {
     uint8_t *out;
     out = (uint8_t *)malloc(out_size);
     if (fp) {
-        fread(out, 1, out_size, fp);
+        fread(out, out_size, 1, fp);
         fprintf(stderr, "Readed from file %s.\n", path);
     }
     *buffer = out;
