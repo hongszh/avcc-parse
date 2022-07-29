@@ -36,7 +36,10 @@ h264.ts的codec_data是没有start code的。
 ```bash
 # gst-play-1.0 mpeg.ts -v
 
-/GstPlayBin:playbin/GstURIDecodeBin:uridecodebin0/GstDecodeBin:decodebin0/avdec_mpeg2video:avdec_mpeg2video0.GstPad:sink: caps = video/mpeg, mpegversion=(int)2, systemstream=(boolean)false, parsed=(boolean)true, width=(int)1920, height=(int)1080, framerate=(fraction)25/1, pixel-aspect-ratio=(fraction)1/1, codec_data=(buffer)000001b378043833ffffe018000001b5144a00010000, profile=(string)main, level=(string)high, interlace-mode=(string)progressive
+/GstPlayBin:playbin/GstURIDecodeBin:uridecodebin0/GstDecodeBin:decodebin0/avdec_mpeg2video:avdec_mpeg2video0.GstPad:sink: \
+caps = video/mpeg, mpegversion=(int)2, systemstream=(boolean)false, parsed=(boolean)true, width=(int)1920, height=(int)1080,\
+framerate=(fraction)25/1, pixel-aspect-ratio=(fraction)1/1, codec_data=(buffer)000001b378043833ffffe018000001b5144a00010000, \
+profile=(string)main, level=(string)high, interlace-mode=(string)progressive
 
 ```
 mpegts的codec_data是有start code的。
