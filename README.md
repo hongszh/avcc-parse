@@ -31,7 +31,15 @@ avcC则采用了另外一种方式。那就是在NALU前面写上几个字节，
 fraction)25/1, coded-picture-structure=(string)frame, chroma-format=(string)4:2:0, bit-depth-luma=(uint)8, bit-depth-chroma=(uint)8, parsed=(boolean)true, alignment=(string)au, profile=(string)high, level
 =(string)4, codec_data=(buffer)01640028ffe1001a67640028acd940780227e584000003000400000300c83c60c65801000668ebe3cb22c0
 ```
+h264.ts的codec_data是没有start code的。
 
+```bash
+# gst-play-1.0 mpeg.ts -v
+
+/GstPlayBin:playbin/GstURIDecodeBin:uridecodebin0/GstDecodeBin:decodebin0/avdec_mpeg2video:avdec_mpeg2video0.GstPad:sink: caps = video/mpeg, mpegversion=(int)2, systemstream=(boolean)false, parsed=(boolean)true, width=(int)1920, height=(int)1080, framerate=(fraction)25/1, pixel-aspect-ratio=(fraction)1/1, codec_data=(buffer)000001b378043833ffffe018000001b5144a00010000, profile=(string)main, level=(string)high, interlace-mode=(string)progressive
+
+```
+mpegts的codec_data是有start code的。
 
 ## build
 
